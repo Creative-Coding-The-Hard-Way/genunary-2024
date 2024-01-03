@@ -1,15 +1,6 @@
-# P5 Gallery Starter
+# Genuary 2024
 
-This project is an opinionated starter for a gallery of P5.js sketches.
-
-Sketches are identified by their url hash and can be chosen using a dropdown.
-
-## TODO
-
-1. update `package.json` and replace the `publicURL` with the name of
-   your repository
-2. update the project name in `package.json`
-3. update the github url in `package.json`
+A handful of sketches based on https://genuary.art/ for the year 2024!
 
 ## Commands
 
