@@ -1,10 +1,10 @@
 {
-  "name": "p5-gallery-starter",
+  "name": "genuary-2024",
   "version": "1.0.0",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Creative-Coding-The-Hard-Way/typescript-browser-starter.git"
+    "url": "git+https://github.com/Creative-Coding-The-Hard-Way/genunary-2024.git"
   },
   "author": "",
   "license": "MIT",
@@ -22,7 +22,7 @@
   "targets": {
     "default": {
       "distDir": "./output",
-      "publicUrl": "/p5-gallery-starter/"
+      "publicUrl": "/genunary-2024/"
     }
   },
   "browserlist": [
