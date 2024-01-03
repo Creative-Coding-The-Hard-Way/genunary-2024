@@ -1,0 +1,54 @@
+{
+  "name": "p5-gallery-starter",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Creative-Coding-The-Hard-Way/typescript-browser-starter.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "develop": "npx @11ty/eleventy && parcel",
+    "build": "npx @11ty/eleventy && parcel build",
+    "check": "tsc --noEmit",
+    "lint": "eslint",
+    "prepare": "husky install",
+    "ci": "npm run check && npm run build"
+  },
+  "source": [
+    "e11ty_dist/index.html"
+  ],
+  "targets": {
+    "default": {
+      "distDir": "./output",
+      "publicUrl": "/p5-gallery-starter/"
+    }
+  },
+  "browserlist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.8.2",
+    "@parcel/transformer-webmanifest": "^2.8.2",
+    "@types/p5": "^1.7.5",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "parcel": "^2.8.2",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "normalize.css": "^8.0.1",
+    "p5": "^1.9.0"
+  }
+}
