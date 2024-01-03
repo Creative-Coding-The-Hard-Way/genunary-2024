@@ -6,6 +6,7 @@ function sketch(p5: P5) {
   let h = 1;
   const max_age = 60 * 25;
   let color_bias = 0;
+  let t_offset = 0;
 
   class Particle {
     private x: number;
@@ -25,7 +26,11 @@ function sketch(p5: P5) {
     move() {
       const t = p5.millis() / 1000.0;
       const angle = p5.map(
-        p5.noise((3 * this.x) / w, (3 * this.y) / h, (1.0 / 25.0) * t),
+        p5.noise(
+          (3 * this.x) / w,
+          (3 * this.y) / h,
+          (1.0 / 25.0) * (t + t_offset)
+        ),
         0,
         1,
         -p5.TWO_PI,
@@ -70,6 +75,10 @@ function sketch(p5: P5) {
     for (let i = 0; i < 1000; i++) {
       particles.push(new Particle());
     }
+  };
+
+  p5.mouseReleased = () => {
+    t_offset += 25.0;
   };
 
   p5.draw = () => {
